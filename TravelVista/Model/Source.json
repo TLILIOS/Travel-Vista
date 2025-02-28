@@ -1,0 +1,139 @@
+[
+    {
+        "name": "Europe",
+        "countries": [
+            {
+                "name": "Norvège",
+                "capital": "Oslo",
+                "description": "La Norvège, officiellement le Royaume de Norvège, est un pays nordique d'Europe du Nord dont le territoire principal comprend la partie ouest et la plus septentrionale de la péninsule scandinave. L'île éloignée de l'Arctique de Jan Mayen et l'archipel de Svalbard font également partie de la Norvège. L'île Bouvet, située dans le Subantarctique, est une dépendance de la Norvège ; elle revendique également les territoires antarctiques de l'île Peter I et de la Terre de la Reine Maud. La Norvège a une superficie totale de 385 207 kilomètres carrés et une population de 5 385 300 habitants en novembre 2020. Le pays partage une longue frontière orientale avec la Suède (longue de 1 619 km). La Norvège est bordée par la Finlande et la Russie au nord-est, et le détroit de Skagerrak au sud, avec le Danemark de l'autre côté. La Norvège a une côte étendue face à l'océan Atlantique Nord et à la mer de Barents.",
+                "pictureName": "norvege",
+                "coordinates":
+                {
+                    "latitude": 59.9139,
+                    "longitude": 10.7522
+                },
+                "rate": 4
+            },
+            {
+                "name": "Italie",
+                "capital": "Rome",
+                "description": "L'Italie, officiellement la République italienne, est un pays d'Europe du Sud. Il est situé principalement sur la péninsule italienne, mais également sur plusieurs îles, dont la Sicile et la Sardaigne. L'Italie partage des frontières terrestres avec la France, la Suisse, l'Autriche et la Slovénie. La capitale de l'Italie est Rome, qui abrite également le Vatican, un État indépendant enclavé dans la ville de Rome. L'Italie a une histoire riche et diversifiée, étant le berceau de la civilisation romaine antique qui a influencé de nombreux aspects de la culture occidentale. Le pays est réputé pour sa cuisine, son art, son architecture et ses paysages variés, des Alpes dans le nord aux côtes méditerranéennes.",
+                "pictureName": "italie",
+                "coordinates":
+                {
+                    "latitude": 41.9028,
+                    "longitude": 12.4964
+                },
+                "rate": 3
+            },
+            {
+                "name": "Islande",
+                "capital": "Reykjavik",
+                "description": "L'Islande est un pays insulaire nordique situé dans l'océan Atlantique Nord, avec une population de 356 991 habitants et une superficie de 103 000 km², ce qui en fait le pays le moins peuplé d'Europe. La capitale et la plus grande ville sont Reykjavík. Reykjavík et les zones environnantes du sud-ouest du pays abritent plus des deux tiers de la population. L'Islande est volcaniquement et géologiquement active. L'intérieur se compose d'un plateau caractérisé par des champs de sable et de lave, des montagnes et des glaciers, et de nombreuses rivières glaciaires coulent vers la mer à travers les basses terres. L'Islande est réchauffée par le courant du Golfe et a un climat tempéré, malgré une latitude élevée juste à l'extérieur du cercle arctique. Sa haute latitude et son influence marine maintiennent des étés frais, avec la majeure partie de l'archipel ayant un climat polaire.",
+                "pictureName": "islande",
+                "coordinates":
+                {
+                    "latitude": 64.1466,
+                    "longitude": -21.9426
+                },
+                "rate": 5
+            }
+        ]
+    },
+    {
+        "name": "Asie",
+        "countries": [
+            {
+                "name": "Vietnam",
+                "capital": "Hanoi",
+                "description": "Officiellement la République socialiste du Vietnam, est un pays d'Asie du Sud-Est et le pays le plus à l'est de la péninsule indochinoise. Avec une population estimée à 97,8 millions d'habitants en 2020, c'est le 16e pays le plus peuplé du monde. Le Vietnam partage ses frontières terrestres avec la Chine au nord, le Laos et le Cambodge à l'ouest. Il partage ses frontières maritimes avec la Thaïlande à travers le golfe de Thaïlande, et les Philippines, l'Indonésie et la Malaisie à travers la mer de Chine méridionale. Sa capitale est Hanoï, et sa ville la plus peuplée est Ho Chi Minh-Ville.",
+                "pictureName": "vietnam",
+                "coordinates":
+                {
+                    "latitude": 21.0285,
+                    "longitude": 105.8542
+                },
+                "rate": 4
+            }
+        ]
+    },
+    {
+        "name": "Oceanie",
+        "countries": [
+            {
+                "name": "Nouvelle-zélande",
+                "capital": "Wellington",
+                "description": "La Nouvelle-Zélande est un pays insulaire situé dans le sud-ouest de l'océan Pacifique. Elle se compose de deux grandes masses terrestres, l'île du Nord (Te Ika-a-Māui) et l'île du Sud (Te Waipounamu), ainsi que de plus de 700 îles plus petites, couvrant une superficie totale de 268 021 kilomètres carrés. La Nouvelle-Zélande est située à environ 2 000 kilomètres à l'est de l'Australie, de l'autre côté de la mer de Tasman, et à 1 000 kilomètres au sud des îles de Nouvelle-Calédonie, des Fidji et de Tonga. La topographie variée du pays, avec des sommets montagneux abrupts, dont les Alpes du Sud, est le résultat de soulèvements tectoniques et d'éruptions volcaniques. La capitale de la Nouvelle-Zélande est Wellington, et sa ville la plus peuplée est Auckland. En raison de leur éloignement, les îles de Nouvelle-Zélande ont été les dernières terres habitables de grande taille à être colonisées par les humains. Entre environ 1280 et 1350, les Polynésiens ont commencé à s'installer dans les îles et ont développé une culture maorie distinctive.",
+                "pictureName": "nz",
+                "coordinates":
+                {
+                    "latitude": -41.2866,
+                    "longitude": 174.7756
+                },
+                "rate": 5
+            }
+        ]
+    },
+    {
+        "name": "Afrique",
+        "countries": [
+            {
+                "name": "Egypte",
+                "capital": "Le Caire",
+                "description": "Officiellement la République arabe d'Égypte, est un pays transcontinental couvrant le coin nord-est de l'Afrique et le coin sud-ouest de l'Asie, formant un pont terrestre créé par la péninsule du Sinaï. L'Égypte est un pays méditerranéen bordé par la bande de Gaza (Palestine) et Israël au nord-est, le golfe d'Aqaba et la mer Rouge à l'est, le Soudan au sud et la Libye à l'ouest. De l'autre côté du golfe d'Aqaba se trouve la Jordanie, de l'autre côté de la mer Rouge se trouvent l'Arabie saoudite, et de l'autre côté de la Méditerranée se trouvent la Grèce, la Turquie et Chypre, bien que aucune ne partage de frontière terrestre avec l'Égypte. L'Égypte a l'une des plus longues histoires de tous les pays, remontant à l'Antiquité le long du delta du Nil jusqu'aux IVe-IIIe millénaires avant notre ère. Considérée comme le berceau de la civilisation, l'Égypte antique a connu certains des premiers développements de l'écriture, de l'agriculture, de l'urbanisation, de la religion organisée et du gouvernement central.",
+                "pictureName": "egypte",
+                "coordinates":
+                {
+                    "latitude": 30.033,
+                    "longitude": 31.233
+                },
+                "rate": 2
+            },
+            {
+                "name": "Namibie",
+                "capital": "Windhoek",
+                "description": "La Namibie, officiellement la République de Namibie, est un pays situé dans le sud-ouest de l'Afrique. Il est bordé par l'océan Atlantique à l'ouest, l'Angola et la Zambie au nord, le Botswana à l'est, et l'Afrique du Sud au sud. La capitale de la Namibie est Windhoek. Le pays est caractérisé par des paysages diversifiés, allant du désert du Namib, l'un des plus anciens du monde, aux plaines herbeuses et aux montagnes escarpées. La faune namibienne est également variée, avec des espèces adaptées à des environnements désertiques et semi-arides.",
+                "pictureName": "namibie",
+                "coordinates":
+                {
+                    "latitude": -22.5597,
+                    "longitude": 17.0832
+                },
+                "rate": 5
+            }
+        ]
+    },
+    {
+        "name": "Ameriques",
+        "countries": [
+            {
+                "name": "Chili",
+                "capital": "Santiago",
+                "description": "Le Chili est un pays d'Amérique du Sud. Il occupe une longue bande de terre entre les Andes à l'est et l'océan Pacifique à l'ouest. Le Chili couvre une superficie de 756 096 kilomètres carrés et a une population de 17,5 millions d'habitants en 2017. La capitale et la plus grande ville sont Santiago, et la langue nationale est l'espagnol. Le Chili partage des frontières avec le Pérou au nord, la Bolivie au nord-est, l'Argentine à l'est et le passage de Drake au sud. Le territoire chilien comprend les îles du Pacifique Juan Fernández, Isla Salas y Gómez, Desventuradas et l'île de Pâques en Océanie. Le Chili revendique également environ 1 250 000 kilomètres carrés de l'Antarctique sous le territoire antarctique chilien.",
+                "pictureName": "chili",
+                "coordinates":
+                {
+                    "latitude": -33.4489,
+                    "longitude": -70.6693
+                },
+                "rate": 3
+            },
+            {
+                "name": "Canada",
+                "capital": "Ottawa",
+                "description": "Le Canada est un pays situé dans la partie nord de l'Amérique du Nord. Ses dix provinces et trois territoires s'étendent de l'Atlantique au Pacifique et vers le nord dans l'océan Arctique, couvrant une superficie totale de 9,98 millions de kilomètres carrés, ce qui en fait le deuxième plus grand pays du monde en superficie totale. Sa frontière sud et ouest avec les États-Unis, s'étendant sur 8 891 kilomètres, est la plus longue frontière terrestre bi-nationale au monde. La capitale du Canada est Ottawa, et ses trois plus grandes agglomérations sont Toronto, Montréal et Vancouver. Divers peuples autochtones ont habité ce qui est maintenant le Canada pendant des millénaires avant la colonisation européenne. À partir du XVIe siècle, des expéditions britanniques et françaises ont exploré et se sont installées le long de la côte atlantique.",
+                "pictureName": "canada",
+                "coordinates":
+                {
+                    "latitude": 45.4215,
+                    "longitude": -75.6993
+                },
+                "rate": 3
+            }
+        ]
+    }
+]
+ 
+ 
+ 
+
