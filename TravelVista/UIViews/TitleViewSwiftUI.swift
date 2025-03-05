@@ -6,21 +6,14 @@
 //
 
 import SwiftUI
-import MapKit
+
 
 struct TitleViewSwiftUI: View {
     let country: Country
-    @State private var region: MKCoordinateRegion
+   
     
     init(country: Country) {
         self.country = country
-        _region = State(initialValue: MKCoordinateRegion(
-                    center: CLLocationCoordinate2D(
-                        latitude: country.coordinates.latitude,
-                        longitude: country.coordinates.longitude
-                    ),
-                    span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
-                ))
     }
     
     var body: some View {
