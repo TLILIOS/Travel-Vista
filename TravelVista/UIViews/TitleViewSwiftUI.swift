@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+<<<<<<< HEAD
 import MapKit
 
 struct TitleViewSwiftUI: View {
@@ -21,6 +22,16 @@ struct TitleViewSwiftUI: View {
                     ),
                     span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
                 ))
+=======
+
+
+struct TitleViewSwiftUI: View {
+    let country: Country
+   
+    
+    init(country: Country) {
+        self.country = country
+>>>>>>> TitleViewSwiftUI
     }
     
     var body: some View {

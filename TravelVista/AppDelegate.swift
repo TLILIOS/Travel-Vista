@@ -6,7 +6,10 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 
+=======
+>>>>>>> TitleViewSwiftUI
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
