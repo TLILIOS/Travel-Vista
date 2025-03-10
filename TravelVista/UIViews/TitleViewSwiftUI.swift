@@ -19,7 +19,7 @@ struct TitleViewSwiftUI: View {
     var body: some View {
         HStack {
                 // Title View
-                VStack {
+            VStack(alignment: .leading) {
                     Text(country.name)
                         .font(.title)
                         .fontWeight(.bold)
@@ -33,7 +33,7 @@ struct TitleViewSwiftUI: View {
                 HStack {
                     ForEach(0..<country.rate, id: \.self) { _ in
                         Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
+                            .foregroundColor(.accentColor)
                     }
                 }
             }
@@ -41,7 +41,7 @@ struct TitleViewSwiftUI: View {
     }
 }
 
-// Preview
+
 struct TitleViewSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
         TitleViewSwiftUI(country: Country(
