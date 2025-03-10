@@ -6,22 +6,19 @@
 //
 import SwiftUI
 
-struct ListItemView: View {
-    // Ajout d'une propriété pour stocker les données du pays
-    var country: Country? = nil
+struct ItemView: View {
+   
+    var country: Country?
     
     var body: some View {
         HStack {
-            // Image du pays avec le même style que dans CustomCell
-            if let country = country, let image = UIImage(named: country.pictureName) {
-                Image(uiImage: image)
+            if let country = country { Image(country.pictureName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 50, height: 50)
                     .clipShape(Circle())
-                    .background(Color.gray.opacity(0.2))
             } else {
-                Image(systemName: "photo")
+                Image(systemName: "smiley.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 50, height: 50)
@@ -33,11 +30,11 @@ struct ListItemView: View {
                 // Nom du pays
                 Text(country?.name ?? "Lorem Ipsum")
                     .font(.headline)
-                
+                    .foregroundStyle(.blue)
                 // Capitale
                 Text(country?.capital ?? "Capitale Fictive")
                     .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
             }
             
             Spacer()
@@ -45,29 +42,35 @@ struct ListItemView: View {
             // Note du pays
             if let country = country {
                 Text(String(country.rate))
-                    .font(.headline)
-                    .foregroundColor(.blue)
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+                Image(systemName: "star.fill")
+                    .foregroundStyle(.accent)
+                            .imageScale(.large)
             } else {
                 Text("4.5")
-                    .font(.headline)
-                    .foregroundColor(.blue)
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+                Image(systemName: "star.fill")
+                    .foregroundStyle(.accent)
+                            .imageScale(.large)
             }
         }
-        .padding(.vertical, 8)
+        .padding()
     }
 }
 
 #Preview {
-    // Création d'un pays de démonstration pour le preview
+    
     let sampleCoordinates = Coordinates(latitude: 48.8566, longitude: 2.3522)
     let sampleCountry = Country(
         name: "France",
         capital: "Paris",
         description: "Description de la France.",
         rate: 5,
-        pictureName: "france",
+        pictureName: "photo.france",
         coordinates: sampleCoordinates
     )
     
-    return ListItemView(country: sampleCountry)
+    return ItemView(country: sampleCountry)
 }

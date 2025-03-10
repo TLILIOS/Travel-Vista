@@ -11,7 +11,6 @@ class ListViewModel: ObservableObject {
     @Published var regions: [Region]
     
     init() {
-        // Chargement des données depuis le Service
         self.regions = Service().load("Source.json")
     }
 }
