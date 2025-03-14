@@ -8,15 +8,13 @@
 import Foundation
 
 // Représente les sections pour classer les pays
-struct Region: Codable, Identifiable {
-    var id: UUID?
+struct Region: Codable {
     var name: String
     var countries: [Country]
 }
 
 // Représente toutes les informations d'un pays
-struct Country: Codable, Identifiable {
-    var id: UUID?
+struct Country: Codable {
     var name: String
     var capital: String
     var description: String

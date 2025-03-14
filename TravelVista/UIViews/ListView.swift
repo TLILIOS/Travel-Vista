@@ -7,7 +7,7 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(viewModel.regions) { region in
+                ForEach(viewModel.regions, id: \.name) { region in
                     RegionSection(region: region)
                 }
                 .navigationTitle("Liste de voyages")
