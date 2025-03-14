@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ListViewModel: ObservableObject {
+final public class ListViewModel: ObservableObject {
     @Published var regions: [Region]
     
     init() {

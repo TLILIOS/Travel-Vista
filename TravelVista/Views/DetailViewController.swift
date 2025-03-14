@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 import MapKit
 
-class DetailViewController: UIViewController, MKMapViewDelegate {
+final class DetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var capitalNameLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
