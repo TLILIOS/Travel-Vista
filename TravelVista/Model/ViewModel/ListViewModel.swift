@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+@MainActor
 final class ListViewModel: ObservableObject {
     @Published var regions: [Region]
     
