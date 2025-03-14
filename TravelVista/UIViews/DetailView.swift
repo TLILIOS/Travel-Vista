@@ -34,7 +34,7 @@ struct DetailView: UIViewControllerRepresentable {
     
     let sampleCoordinates = Coordinates(latitude: 48.8566, longitude: 2.3522)
     let sampleCountry = Country(
-        name: "France",
+        id: UUID(), name: "France",
         capital: "Paris",
         description: "Description de la France avec des informations touristiques.",
         rate: 5,

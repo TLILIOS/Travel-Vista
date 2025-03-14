@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+final class MapViewController: UIViewController, MKMapViewDelegate {
     var coordinates: CLLocationCoordinate2D? = nil
     var capitalName: String? = nil
     

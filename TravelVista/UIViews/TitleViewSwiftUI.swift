@@ -45,7 +45,7 @@ struct TitleViewSwiftUI: View {
 struct TitleViewSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
         TitleViewSwiftUI(country: Country(
-            name: "Nepal",
+            id: UUID(), name: "Nepal",
                            capital: "Kathmandu",
                            description: "Beautiful country with mountains",
                            rate: 5,

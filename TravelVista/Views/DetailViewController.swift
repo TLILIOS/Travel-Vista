@@ -108,23 +108,7 @@ final class DetailViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
     }
     
-//    private func setRateStars(rate: Int) {
-//        var lastRightAnchor = self.rateView.rightAnchor
-//        for _ in 0..<rate {
-//            let starView = UIImageView(image: UIImage(systemName: "star.fill"))
-//            self.rateView.addSubview(starView)
-//
-//            starView.translatesAutoresizingMaskIntoConstraints = false
-//            starView.widthAnchor.constraint(equalToConstant: 19).isActive = true
-//            starView.heightAnchor.constraint(equalToConstant: 19).isActive = true
-//            starView.centerYAnchor.constraint(equalTo: self.rateView.centerYAnchor).isActive = true
-//            starView.rightAnchor.constraint(equalTo: lastRightAnchor).isActive = true
-//            lastRightAnchor = starView.leftAnchor
-//        }
-//    }
     
-    // Cette fonction est appelée lorsque la carte est cliquée
-    // Elle permet d'afficher un nouvel écran qui contient une carte
     @IBAction func showMap(_ sender: Any) {
         guard let country = self.country else {
             print("Erreur: Pays non défini lors de l'ouverture de la carte")

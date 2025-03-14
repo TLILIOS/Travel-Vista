@@ -22,6 +22,7 @@
 		D09391632D7AD8C300CA3C2B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09391622D7AD8C300CA3C2B /* ListView.swift */; };
 		D09391682D7AE16500CA3C2B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09391672D7AE16500CA3C2B /* ListViewModel.swift */; };
 		D093916C2D7AE31900CA3C2B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093916B2D7AE31900CA3C2B /* DetailView.swift */; };
+		D09A4CD62D848DCF00B57105 /* RegionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A4CD52D848DCF00B57105 /* RegionSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D09391622D7AD8C300CA3C2B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		D09391672D7AE16500CA3C2B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D093916B2D7AE31900CA3C2B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D09A4CD52D848DCF00B57105 /* RegionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				D09391562D71A75C00CA3C2B /* TitleViewSwiftUI.swift */,
 				D09391602D7AD52C00CA3C2B /* ItemView.swift */,
 				D09391622D7AD8C300CA3C2B /* ListView.swift */,
+				D09A4CD52D848DCF00B57105 /* RegionSection.swift */,
 				D093916B2D7AE31900CA3C2B /* DetailView.swift */,
 			);
 			path = UIViews;
@@ -201,6 +204,7 @@
 				424C31C42B30A72300279238 /* Model.swift in Sources */,
 				D09391572D71A75C00CA3C2B /* TitleViewSwiftUI.swift in Sources */,
 				D09391682D7AE16500CA3C2B /* ListViewModel.swift in Sources */,
+				D09A4CD62D848DCF00B57105 /* RegionSection.swift in Sources */,
 				424C31C82B30A78B00279238 /* Service.swift in Sources */,
 				D09391612D7AD52C00CA3C2B /* ItemView.swift in Sources */,
 				D093916C2D7AE31900CA3C2B /* DetailView.swift in Sources */,
