@@ -8,14 +8,14 @@ import SwiftUI
 
 struct ItemView: View {
    
-    var country: Country
+    let country: Country
     
     var body: some View {
         HStack {
              Image(country.pictureName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 50, height: 50)
+                    .frame(width: 60, height: 60)
                     .clipShape(Circle())
     
             

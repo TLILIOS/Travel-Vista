@@ -10,7 +10,7 @@ import UIKit
 // le DetailViewController UIKit dans SwiftUI
 struct DetailView: UIViewControllerRepresentable {
    
-    var country: Country
+    let country: Country
     
     func makeUIViewController(context: Context) -> DetailViewController {
         
