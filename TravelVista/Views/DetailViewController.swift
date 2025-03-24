@@ -4,7 +4,7 @@
 //
 //  Created by Amandine Cousin on 18/12/2023.
 //
-
+import SwiftUI
 import UIKit
 import MapKit
 
@@ -23,6 +23,17 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let hostingController = UIHostingController(rootView: TitleViewSwiftUI(country: country!)) // !
+        self.addChild(hostingController)
+        self.view.addSubview(hostingController.view)
+        hostingController.didMove(toParent: self)
+        
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        hostingController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        hostingController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        hostingController.view.topAnchor.constraint(equalTo: self.titleView.bottomAnchor).isActive = true // !
+        hostingController.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        self.titleView.isHidden = true
         
         self.setCustomDesign()
 

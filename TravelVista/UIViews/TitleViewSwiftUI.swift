@@ -37,7 +37,7 @@ struct TitleViewSwiftUI: View {
     var body: some View {
         HStack {
                 // Title View
-                VStack(spacing: 8) {
+                VStack {
                     Text(country.name)
                         .font(.title)
                         .fontWeight(.bold)
