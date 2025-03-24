@@ -14,12 +14,15 @@
 		424C31C62B30A76900279238 /* Source.json in Resources */ = {isa = PBXBuildFile; fileRef = 424C31C52B30A76900279238 /* Source.json */; };
 		424C31C82B30A78B00279238 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424C31C72B30A78B00279238 /* Service.swift */; };
 		42B90C132B2A055B00779364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B90C122B2A055B00779364 /* AppDelegate.swift */; };
-		42B90C172B2A055B00779364 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B90C162B2A055B00779364 /* ListViewController.swift */; };
 		42B90C1A2B2A055B00779364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C182B2A055B00779364 /* Main.storyboard */; };
 		42B90C1C2B2A056000779364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C1B2B2A056000779364 /* Assets.xcassets */; };
 		42B90C1F2B2A056000779364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B90C1D2B2A056000779364 /* LaunchScreen.storyboard */; };
 		D09391572D71A75C00CA3C2B /* TitleViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09391562D71A75C00CA3C2B /* TitleViewSwiftUI.swift */; };
-		D09391592D71AC1E00CA3C2B /* XXX.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09391582D71AC1E00CA3C2B /* XXX.swift */; };
+		D09391612D7AD52C00CA3C2B /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09391602D7AD52C00CA3C2B /* ItemView.swift */; };
+		D09391632D7AD8C300CA3C2B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09391622D7AD8C300CA3C2B /* ListView.swift */; };
+		D09391682D7AE16500CA3C2B /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09391672D7AE16500CA3C2B /* ListViewModel.swift */; };
+		D093916C2D7AE31900CA3C2B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D093916B2D7AE31900CA3C2B /* DetailView.swift */; };
+		D09A4CD62D848DCF00B57105 /* RegionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09A4CD52D848DCF00B57105 /* RegionSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +34,16 @@
 		424C31C72B30A78B00279238 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		42B90C0F2B2A055B00779364 /* TravelVista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelVista.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B90C122B2A055B00779364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42B90C162B2A055B00779364 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		42B90C192B2A055B00779364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42B90C1B2B2A056000779364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42B90C1E2B2A056000779364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42B90C202B2A056000779364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D09391562D71A75C00CA3C2B /* TitleViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewSwiftUI.swift; sourceTree = "<group>"; };
-		D09391582D71AC1E00CA3C2B /* XXX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XXX.swift; sourceTree = "<group>"; };
+		D09391602D7AD52C00CA3C2B /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		D09391622D7AD8C300CA3C2B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		D09391672D7AE16500CA3C2B /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		D093916B2D7AE31900CA3C2B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D09A4CD52D848DCF00B57105 /* RegionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				424C31BC2B30955E00279238 /* DetailViewController.swift */,
-				42B90C162B2A055B00779364 /* ListViewController.swift */,
 				424C31BA2B30919400279238 /* CustomCell.swift */,
 				424C31BF2B30A39B00279238 /* MapViewController.swift */,
 			);
@@ -68,6 +73,7 @@
 				424C31C32B30A72300279238 /* Model.swift */,
 				424C31C52B30A76900279238 /* Source.json */,
 				424C31C72B30A78B00279238 /* Service.swift */,
+				D09391662D7AE12100CA3C2B /* ViewModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,9 +113,20 @@
 			isa = PBXGroup;
 			children = (
 				D09391562D71A75C00CA3C2B /* TitleViewSwiftUI.swift */,
-				D09391582D71AC1E00CA3C2B /* XXX.swift */,
+				D09391602D7AD52C00CA3C2B /* ItemView.swift */,
+				D09391622D7AD8C300CA3C2B /* ListView.swift */,
+				D09A4CD52D848DCF00B57105 /* RegionSection.swift */,
+				D093916B2D7AE31900CA3C2B /* DetailView.swift */,
 			);
 			path = UIViews;
+			sourceTree = "<group>";
+		};
+		D09391662D7AE12100CA3C2B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D09391672D7AE16500CA3C2B /* ListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,11 +203,14 @@
 			files = (
 				424C31C42B30A72300279238 /* Model.swift in Sources */,
 				D09391572D71A75C00CA3C2B /* TitleViewSwiftUI.swift in Sources */,
+				D09391682D7AE16500CA3C2B /* ListViewModel.swift in Sources */,
+				D09A4CD62D848DCF00B57105 /* RegionSection.swift in Sources */,
 				424C31C82B30A78B00279238 /* Service.swift in Sources */,
-				D09391592D71AC1E00CA3C2B /* XXX.swift in Sources */,
-				42B90C172B2A055B00779364 /* ListViewController.swift in Sources */,
+				D09391612D7AD52C00CA3C2B /* ItemView.swift in Sources */,
+				D093916C2D7AE31900CA3C2B /* DetailView.swift in Sources */,
 				424C31C02B30A39B00279238 /* MapViewController.swift in Sources */,
 				42B90C132B2A055B00779364 /* AppDelegate.swift in Sources */,
+				D09391632D7AD8C300CA3C2B /* ListView.swift in Sources */,
 				424C31BD2B30955E00279238 /* DetailViewController.swift in Sources */,
 				424C31BB2B30919400279238 /* CustomCell.swift in Sources */,
 			);

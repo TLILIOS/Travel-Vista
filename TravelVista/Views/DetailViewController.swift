@@ -1,14 +1,15 @@
+
 //
 //  DetailViewController.swift
 //  TravelVista
 //
-//  Created by Amandine Cousin on 18/12/2023.
+//  Created by Hamdi Tlili on 18/12/2023.
 //
 import SwiftUI
 import UIKit
 import MapKit
 
-class DetailViewController: UIViewController, MKMapViewDelegate {
+final class DetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var capitalNameLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -23,7 +24,17 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let hostingController = UIHostingController(rootView: TitleViewSwiftUI(country: country!)) // !
+        
+        self.setCustomDesign()
+        
+        // Vérifier que le pays est défini avant de l'utiliser
+        guard let country = self.country else {
+            print("Erreur: Pays non défini dans DetailViewController")
+            return
+        }
+        
+        // Créer TitleViewSwiftUI avec le pays validé
+        let hostingController = UIHostingController(rootView: TitleViewSwiftUI(country: country))
         self.addChild(hostingController)
         self.view.addSubview(hostingController.view)
         hostingController.didMove(toParent: self)
@@ -31,68 +42,82 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         hostingController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         hostingController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        hostingController.view.topAnchor.constraint(equalTo: self.titleView.bottomAnchor).isActive = true // !
-        hostingController.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        self.titleView.isHidden = true
         
-        self.setCustomDesign()
-
-        if let country = self.country {
-            self.setUpData(country: country)
+        // Vérifier que le titleView est initialisé avant de l'utiliser
+        if let titleView = self.titleView {
+            hostingController.view.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: -40).isActive = true
+            titleView.isHidden = true
+        } else {
+            // Si titleView n'est pas disponible, placer le hostingController en haut de la vue
+            hostingController.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         }
+        
+        hostingController.view.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        
+        // Configurer la vue avec les données du pays
+        self.setUpData(country: country)
     }
     
     private func setUpData(country: Country) {
+        // Définir le titre de la vue
         self.title = country.name
         
-        self.countryNameLabel.text = country.name
-        self.capitalNameLabel.text = country.capital
-        self.imageView.image = UIImage(named: country.pictureName )
-        self.descriptionTextView.text = country.description
+        // Vérifier que les IBOutlets sont initialisés avant de les utiliser
+        if let imageView = self.imageView {
+            imageView.image = UIImage(named: country.pictureName)
+        }
         
-        self.setRateStars(rate: country.rate)
-        self.setMapLocation(lat: self.country?.coordinates.latitude ?? 28.394857,
-                            long: self.country?.coordinates.longitude ?? 84.124008)
+        if let descriptionTextView = self.descriptionTextView {
+            descriptionTextView.text = country.description
+        }
+        
+        // Configurer la carte avec les coordonnées du pays
+        self.setMapLocation(lat: country.coordinates.latitude,
+                            long: country.coordinates.longitude)
     }
     
     private func setCustomDesign() {
-        self.mapView.layer.cornerRadius = self.mapView.frame.size.width / 2
-        self.embedMapView.layer.cornerRadius = self.embedMapView.frame.size.width / 2
-        self.mapButton.layer.cornerRadius = self.mapButton.frame.size.width / 2
+        // Vérifier que tous les IBOutlets sont initialisés avant de les utiliser
+        guard let mapView = self.mapView,
+              let embedMapView = self.embedMapView,
+              let mapButton = self.mapButton else {
+            print("Avertissement: IBOutlets non initialisés dans setCustomDesign")
+            return
+        }
         
-        self.mapView.layer.borderColor = UIColor(named: "CustomSand")?.cgColor
-        self.mapView.layer.borderWidth = 2
+        // Configuration des éléments UI
+        mapView.layer.cornerRadius = mapView.frame.size.width / 2
+        embedMapView.layer.cornerRadius = embedMapView.frame.size.width / 2
+        mapButton.layer.cornerRadius = mapButton.frame.size.width / 2
+        
+        mapView.layer.borderColor = UIColor(named: "CustomSand")?.cgColor
+        mapView.layer.borderWidth = 2
     }
     
     private func setMapLocation(lat: Double, long: Double) {
+        // Vérifier que mapView est initialisé avant de l'utiliser
+        guard let mapView = self.mapView else {
+            print("Avertissement: mapView non initialisé dans setMapLocation")
+            return
+        }
+        
         let initialLocation = CLLocationCoordinate2D(latitude: lat, longitude: long)
         let span = MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
         let region = MKCoordinateRegion(center: initialLocation, span: span)
-        self.mapView.setRegion(region, animated: true)
-        self.mapView.delegate = self
+        mapView.setRegion(region, animated: true)
+        mapView.delegate = self
     }
     
-    private func setRateStars(rate: Int) {
-        var lastRightAnchor = self.rateView.rightAnchor
-        for _ in 0..<rate {
-            let starView = UIImageView(image: UIImage(systemName: "star.fill"))
-            self.rateView.addSubview(starView)
-            
-            starView.translatesAutoresizingMaskIntoConstraints = false
-            starView.widthAnchor.constraint(equalToConstant: 19).isActive = true
-            starView.heightAnchor.constraint(equalToConstant: 19).isActive = true
-            starView.centerYAnchor.constraint(equalTo: self.rateView.centerYAnchor).isActive = true
-            starView.rightAnchor.constraint(equalTo: lastRightAnchor).isActive = true
-            lastRightAnchor = starView.leftAnchor
-        }
-    }
     
-    // Cette fonction est appelée lorsque la carte est cliquée
-    // Elle permet d'afficher un nouvel écran qui contient une carte
     @IBAction func showMap(_ sender: Any) {
+        guard let country = self.country else {
+            print("Erreur: Pays non défini lors de l'ouverture de la carte")
+            return
+        }
+        
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController: MapViewController = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        nextViewController.setUpData(capitalName: self.country?.capital, lat: self.country?.coordinates.latitude ?? 28.394857, long: self.country?.coordinates.longitude ?? 84.124008)
+        nextViewController.setUpData(capitalName: country.capital, lat: country.coordinates.latitude, long: country.coordinates.longitude)
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
